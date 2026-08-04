@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run)",
+      "Bash(npm run *)",
+      "Bash(cp \"/c/Users/hp/Downloads/img-1.png\" \"./celebration-traditional-wedding.png\")",
+      "Bash(cp \"/c/Users/hp/Downloads/img-2.png\" \"./celebration-multiday.png\")",
+      "Bash(cp \"/c/Users/hp/Downloads/img-3.png\" \"./celebration-jain-wedding.png\")",
+      "Bash(cp \"/c/Users/hp/Downloads/img-4.png\" \"./celebration-reception.png\")",
+      "Bash(curl *)",
+      "Bash(awk '{ print length, NR }' /c/Users/hp/AppData/Local/Temp/claude/C--Users-hp-Projects-divyam-wedding-clean/ad4053f9-00d3-4200-8664-b3815412569a/scratchpad/divyam.html)",
+      "Bash(grep -oE 'letter-spacing:[^;]{1,20}' /c/Users/hp/AppData/Local/Temp/claude/C--Users-hp-Projects-divyam-wedding-clean/ad4053f9-00d3-4200-8664-b3815412569a/scratchpad/divyam.css)"
+    ]
+  }
+}
