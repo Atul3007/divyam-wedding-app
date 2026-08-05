@@ -43,7 +43,7 @@ export default function LocalPlanning() {
 
         <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
           {items.map(({ icon: Icon, title, text }, i) => (
-            <ScrollReveal key={title} delay={i * 80} className="h-full">
+            <ScrollReveal key={title} delay={i * 180} duration={800} variant="right" className="h-full">
               <div className="flex h-full items-start gap-2 rounded-md border border-black/15 bg-white px-3 py-4 text-left shadow-sm">
                 <Icon className="h-10 w-10 shrink-0 text-gold" />
                 <div>

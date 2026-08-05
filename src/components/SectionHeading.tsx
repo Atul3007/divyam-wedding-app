@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type SectionHeadingProps = {
   title: string;
   className?: string;
@@ -10,7 +12,13 @@ export default function SectionHeading({ title, className = "", light = false }:
       <h2 className={`font-display text-2xl font-semibold sm:text-3xl ${light ? "text-white" : "text-ink"}`}>
         {title}
       </h2>
-      <div className="mx-auto mt-3 h-px w-16 bg-gold" />
+      <Image
+        src="/images/divider.png"
+        alt=""
+        width={1000}
+        height={150}
+        className="mx-auto mt-3 h-6 w-48"
+      />
     </div>
   );
 }

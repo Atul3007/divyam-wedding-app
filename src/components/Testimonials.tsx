@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import SectionHeading from "./SectionHeading";
+import ScrollReveal from "./ScrollReveal";
 import { QuoteIcon, StarIcon, ArrowRightIcon } from "./icons";
 
 const reviews = [
@@ -44,16 +45,18 @@ export default function Testimonials() {
 
           <div className="grid flex-1 grid-cols-1 gap-6 lg:grid-cols-3">
             {visible.map((r, i) => (
-              <div key={`${r.name}-${start}-${i}`} className="rounded-md bg-navy-light p-6">
-                <QuoteIcon className="h-6 w-6 text-gold" />
-                <div className="mt-3 flex gap-0.5">
-                  {Array.from({ length: 5 }).map((_, s) => (
-                    <StarIcon key={s} className="h-3.5 w-3.5 text-gold" />
-                  ))}
+              <ScrollReveal key={`${r.name}-${start}-${i}`} delay={i * 140} variant="fade">
+                <div className="rounded-md bg-navy-light p-6">
+                  <QuoteIcon className="h-6 w-6 text-gold" />
+                  <div className="mt-3 flex gap-0.5">
+                    {Array.from({ length: 5 }).map((_, s) => (
+                      <StarIcon key={s} className="h-3.5 w-3.5 text-gold" />
+                    ))}
+                  </div>
+                  <p className="mt-3 text-[13px] leading-relaxed text-white/80">{r.text}</p>
+                  <p className="mt-4 text-[12px] text-white/50">— {r.name}</p>
                 </div>
-                <p className="mt-3 text-[13px] leading-relaxed text-white/80">{r.text}</p>
-                <p className="mt-4 text-[12px] text-white/50">— {r.name}</p>
-              </div>
+              </ScrollReveal>
             ))}
           </div>
 

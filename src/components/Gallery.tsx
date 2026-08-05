@@ -42,10 +42,15 @@ export default function Gallery() {
 
         <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {celebrations.map((c, i) => (
-            <ScrollReveal key={c.title} delay={i * 80} className="h-full">
-              <div className="flex h-full flex-col overflow-hidden rounded-md border border-black/15 bg-white shadow-sm">
-                <div className="relative h-40 w-full">
-                  <Image src={c.src} alt={c.alt} fill className="object-cover" />
+            <ScrollReveal key={c.title} delay={i * 120} variant="zoom" className="h-full">
+              <div className="group flex h-full flex-col overflow-hidden rounded-md border border-black/15 bg-white shadow-sm">
+                <div className="relative h-40 w-full overflow-hidden">
+                  <Image
+                    src={c.src}
+                    alt={c.alt}
+                    fill
+                    className="cursor-pointer object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                  />
                 </div>
                 <div className="px-3 py-2.5">
                   <h3 className="font-display text-sm font-semibold text-ink">{c.title}</h3>

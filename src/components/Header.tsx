@@ -45,12 +45,12 @@ export default function Header() {
           </div>
         </a>
 
-        <nav className="hidden items-center gap-6 lg:flex">
+        <nav className="hidden items-center gap-4 xl:flex">
           {navItems.map((item) => (
             <div key={item.label} className="group relative">
               <a
                 href={item.href}
-                className="flex items-center gap-1 text-[13px] font-medium uppercase tracking-wide-xs text-white/85 transition hover:text-gold"
+                className="flex items-center gap-1 whitespace-nowrap text-[13px] font-medium uppercase tracking-wide-xs text-white/85 transition hover:text-gold"
               >
                 {item.label}
                 {item.children && <ChevronDownIcon className="h-3.5 w-3.5" />}
@@ -74,7 +74,7 @@ export default function Header() {
 
         <a
           href="#contact"
-          className="hidden shrink-0 rounded-sm border border-gold px-5 py-2.5 text-[12px] font-semibold uppercase tracking-wide-xs text-gold transition hover:bg-gold hover:text-navy lg:inline-block"
+          className="hidden shrink-0 rounded-sm border border-gold px-5 py-2.5 text-[12px] font-semibold uppercase tracking-wide-xs text-gold transition hover:bg-gold hover:text-navy xl:inline-block"
         >
           Request a Consultation
         </a>
@@ -83,7 +83,7 @@ export default function Header() {
           type="button"
           aria-label="Toggle menu"
           onClick={() => setMobileOpen((v) => !v)}
-          className="flex h-9 w-9 flex-col items-center justify-center gap-1.5 lg:hidden"
+          className="flex h-9 w-9 shrink-0 flex-col items-center justify-center gap-1.5 xl:hidden"
         >
           <span className={`h-px w-6 bg-white transition ${mobileOpen ? "translate-y-1.5 rotate-45" : ""}`} />
           <span className={`h-px w-6 bg-white transition ${mobileOpen ? "opacity-0" : ""}`} />
@@ -92,7 +92,7 @@ export default function Header() {
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-white/10 bg-navy-dark px-5 py-4 lg:hidden">
+        <div className="border-t border-white/10 bg-navy-dark px-5 py-4 xl:hidden">
           <nav className="flex flex-col gap-3">
             {navItems.map((item) => (
               <a

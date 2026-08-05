@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import SectionHeading from "./SectionHeading";
+import ScrollReveal from "./ScrollReveal";
 import { PlusIcon } from "./icons";
 
 const faqs = [
@@ -68,16 +69,16 @@ export default function FAQ() {
         <SectionHeading title="Frequently Asked Questions" />
 
         <div className="mt-8 grid grid-cols-1 gap-x-12 lg:grid-cols-2">
-          <div>
+          <ScrollReveal variant="left">
             {left.map((f) => (
               <FaqItem key={f.q} {...f} />
             ))}
-          </div>
-          <div>
+          </ScrollReveal>
+          <ScrollReveal variant="right">
             {right.map((f) => (
               <FaqItem key={f.q} {...f} />
             ))}
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>

@@ -3,7 +3,7 @@ import { ArrowRightIcon } from "./icons";
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-navy-dark">
+    <section className="relative overflow-hidden bg-gold-dark">
       <Image
         src="/images/hero-img.png"
         alt="Illuminated wedding mandap on the riverside ghats at dusk"
