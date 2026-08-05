@@ -48,12 +48,12 @@ function FaqItem({ q, a }: { q: string; a: string }) {
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="flex w-full items-center justify-between gap-4 py-4 text-left text-sm font-medium text-ink"
+        className="flex w-full items-center justify-between gap-4 py-3 text-left text-sm font-medium text-ink"
       >
         {q}
         <PlusIcon className={`h-4 w-4 shrink-0 text-gold transition ${open ? "rotate-45" : ""}`} />
       </button>
-      {open && <p className="pb-4 text-[13px] leading-relaxed text-ink-muted">{a}</p>}
+      {open && <p className="pb-3 text-[13px] leading-relaxed text-ink-muted">{a}</p>}
     </div>
   );
 }
@@ -68,7 +68,7 @@ export default function FAQ() {
       <div className="mx-auto max-w-6xl 2xl:max-w-[1440px] px-5 lg:px-8">
         <SectionHeading title="Frequently Asked Questions" />
 
-        <div className="mt-8 grid grid-cols-1 gap-x-12 lg:grid-cols-2">
+        <div className="mt-5 grid grid-cols-1 gap-x-12 lg:grid-cols-2">
           <ScrollReveal variant="left">
             {left.map((f) => (
               <FaqItem key={f.q} {...f} />

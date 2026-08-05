@@ -33,7 +33,7 @@ export default function Testimonials() {
       <div className="mx-auto max-w-7xl 2xl:max-w-[1600px] px-5 lg:px-8">
         <SectionHeading title="What Families Say" light />
 
-        <div className="mt-8 flex items-center gap-4">
+        <div className="mt-5 flex items-center gap-4">
           <button
             type="button"
             onClick={prev}
@@ -43,18 +43,18 @@ export default function Testimonials() {
             <ArrowRightIcon className="h-4 w-4 rotate-180" />
           </button>
 
-          <div className="grid flex-1 grid-cols-1 gap-6 lg:grid-cols-3">
+          <div className="grid flex-1 grid-cols-1 gap-4 lg:grid-cols-3">
             {visible.map((r, i) => (
               <ScrollReveal key={`${r.name}-${start}-${i}`} delay={i * 140} variant="up">
-                <div className="rounded-md bg-navy-light p-6">
-                  <QuoteIcon className="h-6 w-6 text-gold" />
-                  <div className="mt-3 flex gap-0.5">
+                <div className="rounded-md bg-navy-light p-4">
+                  <QuoteIcon className="h-5 w-5 text-gold" />
+                  <div className="mt-2 flex gap-0.5">
                     {Array.from({ length: 5 }).map((_, s) => (
                       <StarIcon key={s} className="h-3.5 w-3.5 text-gold" />
                     ))}
                   </div>
-                  <p className="mt-3 text-[13px] leading-relaxed text-white/80">{r.text}</p>
-                  <p className="mt-4 text-[12px] text-white/50">— {r.name}</p>
+                  <p className="mt-2 text-[13px] leading-snug text-white/80">{r.text}</p>
+                  <p className="mt-2 text-[12px] text-white/50">— {r.name}</p>
                 </div>
               </ScrollReveal>
             ))}
@@ -70,7 +70,7 @@ export default function Testimonials() {
           </button>
         </div>
 
-        <div className="mt-8 flex justify-center">
+        <div className="mt-5 flex justify-center">
           <a
             href="https://www.google.com/search?q=divyam+weddings+reviews"
             className="inline-flex items-center gap-2 rounded-sm border border-white/25 px-6 py-3 text-xs font-semibold uppercase tracking-wide-xs text-white transition hover:border-gold hover:text-gold"
