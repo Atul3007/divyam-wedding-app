@@ -76,15 +76,15 @@ export default function Footer() {
             <h4 className="text-[12px] font-semibold uppercase tracking-wide-xs text-gold">Get in Touch</h4>
             <ul className="mt-4 space-y-3 text-[13px] text-white/60">
               <li className="flex items-center gap-2">
-                <PhoneIcon className="h-4 w-4 text-gold" />
+                <PhoneIcon className="h-5 w-5 text-gold" />
                 +91 81750 04069
               </li>
               <li className="flex items-center gap-2">
-                <MailIcon className="h-4 w-4 text-gold" />
+                <MailIcon className="h-5 w-5 text-gold" />
                 hello@divyam.com
               </li>
               <li className="flex items-start gap-2">
-                <PinIcon className="mt-0.5 h-4 w-4 shrink-0 text-gold" />
+                <PinIcon className="mt-0.5 h-5 w-5 shrink-0 text-gold" />
                 Prayagraj, Uttar Pradesh, India
               </li>
             </ul>

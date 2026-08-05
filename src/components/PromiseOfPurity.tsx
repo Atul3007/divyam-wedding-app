@@ -26,7 +26,7 @@ export default function PromiseOfPurity() {
           <div className="mt-6 grid grid-cols-1 gap-5 sm:grid-cols-2">
             {points.map(({ icon: Icon, text }) => (
               <div key={text} className="flex items-start gap-3">
-                <Icon className="mt-0.5 h-8 w-8 shrink-0 text-gold" />
+                <Icon className="mt-0.5 h-10 w-10 shrink-0 text-gold" />
                 <p className="text-[13px] leading-snug text-ink-muted">{text}</p>
               </div>
             ))}

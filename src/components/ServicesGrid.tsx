@@ -53,7 +53,7 @@ export default function ServicesGrid() {
           {services.map(({ icon: Icon, title, text }, i) => (
             <ScrollReveal key={title} delay={i * 170} duration={1200} className="h-full">
               <div className="flex h-full flex-col items-center rounded-md border border-black/15 bg-white px-4 py-5 text-center shadow-sm transition hover:shadow-md">
-                <Icon className="h-12 w-12 text-gold" />
+                <Icon className="h-14 w-14 text-gold" />
                 <h3 className="mt-3 font-display text-base font-semibold text-ink">{title}</h3>
                 <p className="mt-2 flex-1 text-[13px] leading-relaxed text-ink-muted">{text}</p>
                 <a
