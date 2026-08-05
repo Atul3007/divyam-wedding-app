@@ -26,7 +26,7 @@ const items = [
 export default function TrustBar() {
   return (
     <section className="bg-navy">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 px-5 py-6 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
+      <div className="mx-auto grid max-w-7xl 2xl:max-w-[1600px] grid-cols-1 gap-6 px-5 py-6 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
         {items.map(({ icon: Icon, title, text }) => (
           <div key={title} className="flex items-start gap-3">
             <Icon className="h-12 w-12 shrink-0 text-gold" />

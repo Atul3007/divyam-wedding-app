@@ -33,7 +33,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-navy text-white">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-5 py-3 lg:px-8">
+      <div className="mx-auto flex max-w-7xl 2xl:max-w-[1600px] items-center justify-between gap-6 px-5 py-3 lg:px-8">
         <a href="#" className="shrink-0">
           <div className="font-display text-xl font-semibold tracking-wide-xs">
             D I V Y A M<span className="align-super text-[0.5em] text-gold">°</span>

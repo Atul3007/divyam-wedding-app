@@ -29,22 +29,22 @@ const steps = [
 
 export default function ProcessSteps() {
   return (
-    <section className="bg-cream py-1 sm:py-5">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section className="border-t border-black/10 bg-cream py-1 sm:py-5">
+      <div className="mx-auto max-w-7xl 2xl:max-w-[1600px] px-5 lg:px-8">
         <SectionHeading title="How We Plan Weddings in Prayagraj" />
 
         <div className="relative mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
           <ScrollReveal
             variant="growX"
-            duration={1400}
+            duration={1800}
             className="absolute top-6 left-[10%] right-[10%] hidden border-t-2 border-dotted border-gold/50 lg:block"
           />
           {midpoints.map((pos) => (
             <ScrollReveal
               key={pos}
               variant="fade"
-              delay={((pos - 10) / 80) * 1400}
-              duration={350}
+              delay={((pos - 10) / 80) * 1800}
+              duration={450}
               className="absolute top-6 z-10 hidden -translate-y-1/2 -translate-x-1/2 text-gold/70 lg:block"
               style={{ left: `${pos}%` }}
             >
@@ -52,7 +52,7 @@ export default function ProcessSteps() {
             </ScrollReveal>
           ))}
           {steps.map((step, i) => (
-            <ScrollReveal key={step.title} delay={i * 180} duration={800} variant="right">
+            <ScrollReveal key={step.title} delay={i * 240} duration={1100} variant="right">
               <div className="relative flex flex-col items-center text-center">
                 <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-navy font-display text-lg font-semibold text-gold">
                   {i + 1}

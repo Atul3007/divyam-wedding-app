@@ -32,7 +32,7 @@ const socials = [FacebookIcon, InstagramIcon, YoutubeIcon, LinkedInIcon, Pintere
 export default function Footer() {
   return (
     <footer className="bg-navy-dark text-white/70">
-      <div className="mx-auto max-w-7xl px-5 py-5 lg:px-8">
+      <div className="mx-auto max-w-7xl 2xl:max-w-[1600px] px-5 py-5 lg:px-8">
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1fr_1fr]">
           <div>
             <div className="font-display text-xl font-semibold tracking-wide-xs text-white">
@@ -93,7 +93,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10 px-5 py-4">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-2 text-[11px] text-white/40 sm:flex-row lg:px-8">
+        <div className="mx-auto flex max-w-7xl 2xl:max-w-[1600px] flex-col items-center justify-between gap-2 text-[11px] text-white/40 sm:flex-row lg:px-8">
           <p>© 2026 D I V Y A M°. All rights reserved.</p>
           <p>Website by Adgenic Communications Private Limited</p>
         </div>

@@ -65,7 +65,7 @@ export default function FAQ() {
 
   return (
     <section className="bg-white py-1 sm:py-5">
-      <div className="mx-auto max-w-6xl px-5 lg:px-8">
+      <div className="mx-auto max-w-6xl 2xl:max-w-[1440px] px-5 lg:px-8">
         <SectionHeading title="Frequently Asked Questions" />
 
         <div className="mt-8 grid grid-cols-1 gap-x-12 lg:grid-cols-2">

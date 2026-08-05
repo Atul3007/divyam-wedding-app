@@ -13,7 +13,7 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-gradient-to-r from-navy-dark via-navy-dark/60 to-transparent" />
 
-      <div className="relative mx-auto max-w-7xl px-5 py-1 sm:py-5 lg:px-8">
+      <div className="relative mx-auto max-w-7xl 2xl:max-w-[1600px] px-5 py-1 sm:py-5 lg:px-8">
         <div className="max-w-xl">
           <p className="text-xs font-semibold uppercase tracking-wide-xs text-gold">
             Weddings in Prayagraj

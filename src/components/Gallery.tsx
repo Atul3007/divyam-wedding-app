@@ -36,13 +36,13 @@ const celebrations = [
 
 export default function Gallery() {
   return (
-    <section id="celebrations" className="bg-cream py-1 sm:py-5">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section id="celebrations" className="border-t border-black/10 bg-cream py-1 sm:py-5">
+      <div className="mx-auto max-w-7xl 2xl:max-w-[1600px] px-5 lg:px-8">
         <SectionHeading title="Real Celebrations in Prayagraj" />
 
         <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {celebrations.map((c, i) => (
-            <ScrollReveal key={c.title} delay={i * 120} variant="zoom" className="h-full">
+            <ScrollReveal key={c.title} delay={i * 170} variant="zoom" className="h-full">
               <div className="group flex h-full flex-col overflow-hidden rounded-md border border-black/15 bg-white shadow-sm">
                 <div className="relative h-40 w-full overflow-hidden">
                   <Image

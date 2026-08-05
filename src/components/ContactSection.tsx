@@ -44,38 +44,32 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="bg-navy py-1 sm:py-5">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1.1fr_1.3fr_0.9fr]">
+      <div className="mx-auto max-w-7xl 2xl:max-w-[1600px] px-5 lg:px-8">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1.1fr_1.3fr_0.9fr]">
           <div>
             <h2 className="font-display text-2xl font-semibold text-white sm:text-3xl">
               Let&apos;s Plan Your Celebration in Prayagraj
             </h2>
-            <p className="mt-4 text-sm leading-relaxed text-white/70">
-              We would be honoured to understand your vision and help you plan a celebration
-              that your family will always cherish.
+            <p className="mt-3 text-sm leading-relaxed text-white/70">
+              We would be honoured to understand your vision and help plan a celebration your
+              family will always cherish.
             </p>
 
-            <div className="mt-8 space-y-4 text-[13px] text-white/70">
+            <div className="mt-5 space-y-3 text-[13px] text-white/70">
               <div className="flex gap-3">
                 <PinIcon className="h-5 w-5 shrink-0 text-gold" />
                 <p>
-                  D I V Y A M°
+                  D I V Y A M° — Nalni Jail Road, George Town,
                   <br />
-                  A Unit of Adgenic Communications Private Limited
-                  <br />
-                  1st Floor, Nalni Jail Road, George Town,
-                  <br />
-                  Prayagraj, Uttar Pradesh 211002, India
+                  Prayagraj, Uttar Pradesh 211002
                 </p>
               </div>
               <div className="flex gap-3">
                 <ClockIcon className="h-5 w-5 shrink-0 text-gold" />
                 <p>
-                  Mon – Sun: 10:00 AM – 8:00 PM
+                  Mon – Sun: 10 AM – 8 PM
                   <br />
-                  Serving: Prayagraj &amp; Nearby Areas
-                  <br />
-                  Also Serving: Lucknow, Varanasi, Bhadohi &amp; Kanpur
+                  Also serving Lucknow, Varanasi, Bhadohi &amp; Kanpur
                 </p>
               </div>
               <div className="flex gap-3">
@@ -85,7 +79,7 @@ export default function ContactSection() {
             </div>
           </div>
 
-          <div className="rounded-md bg-navy-light p-6 sm:p-8">
+          <div className="rounded-md bg-navy-light p-5 sm:p-6">
             <h3 className="font-display text-lg font-semibold text-white">
               Request a Private Consultation
             </h3>
@@ -95,8 +89,8 @@ export default function ContactSection() {
                 Thank you — we&apos;ve received your request and will be in touch shortly.
               </p>
             ) : (
-              <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+              <form className="mt-4 space-y-3" onSubmit={handleSubmit}>
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                   <input
                     required
                     name="name"
@@ -143,7 +137,7 @@ export default function ContactSection() {
 
                 <textarea
                   name="message"
-                  rows={3}
+                  rows={2}
                   placeholder="Message"
                   className="w-full rounded-sm border border-white/15 bg-transparent px-4 py-3 text-sm text-white placeholder:text-white/40 focus:border-gold focus:outline-none"
                 />
@@ -162,17 +156,17 @@ export default function ContactSection() {
             )}
           </div>
 
-          <div className="rounded-md border border-white/10 bg-navy-light p-6">
+          <div className="rounded-md border border-white/10 bg-navy-light p-5">
             <h3 className="font-display text-base font-semibold text-white">Or WhatsApp Us</h3>
-            <div className="mt-4 flex h-11 w-11 items-center justify-center rounded-full bg-[#25D366] text-white">
+            <div className="mt-3 flex h-11 w-11 items-center justify-center rounded-full bg-[#25D366] text-white">
               <WhatsAppIcon className="h-6 w-6" />
             </div>
-            <p className="mt-4 text-[13px] leading-relaxed text-white/70">
+            <p className="mt-3 text-[13px] leading-relaxed text-white/70">
               Share a few details and we will get back to you.
             </p>
             <a
               href="https://wa.me/918175004069"
-              className="mt-5 inline-flex items-center gap-2 rounded-sm bg-[#25D366] px-5 py-3 text-xs font-semibold uppercase tracking-wide-xs text-white transition hover:brightness-95"
+              className="mt-4 inline-flex items-center gap-2 rounded-sm bg-[#25D366] px-5 py-3 text-xs font-semibold uppercase tracking-wide-xs text-white transition hover:brightness-95"
             >
               Chat on WhatsApp
             </a>

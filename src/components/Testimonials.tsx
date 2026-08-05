@@ -30,7 +30,7 @@ export default function Testimonials() {
 
   return (
     <section className="bg-navy py-1 sm:py-5">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+      <div className="mx-auto max-w-7xl 2xl:max-w-[1600px] px-5 lg:px-8">
         <SectionHeading title="What Families Say" light />
 
         <div className="mt-8 flex items-center gap-4">
@@ -45,7 +45,7 @@ export default function Testimonials() {
 
           <div className="grid flex-1 grid-cols-1 gap-6 lg:grid-cols-3">
             {visible.map((r, i) => (
-              <ScrollReveal key={`${r.name}-${start}-${i}`} delay={i * 140} variant="fade">
+              <ScrollReveal key={`${r.name}-${start}-${i}`} delay={i * 190} variant="fade">
                 <div className="rounded-md bg-navy-light p-6">
                   <QuoteIcon className="h-6 w-6 text-gold" />
                   <div className="mt-3 flex gap-0.5">

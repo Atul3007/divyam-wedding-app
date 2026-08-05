@@ -37,13 +37,13 @@ const items = [
 
 export default function LocalPlanning() {
   return (
-    <section className="py-1 sm:py-5">
-      <div className="mx-auto max-w-7xl px-5 lg:px-8">
+    <section className="border-t border-black/10 py-1 sm:py-5">
+      <div className="mx-auto max-w-7xl 2xl:max-w-[1600px] px-5 lg:px-8">
         <SectionHeading title="Local Planning & Readiness in Prayagraj" />
 
         <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
           {items.map(({ icon: Icon, title, text }, i) => (
-            <ScrollReveal key={title} delay={i * 180} duration={800} variant="right" className="h-full">
+            <ScrollReveal key={title} delay={i * 230} duration={1100} variant="right" className="h-full">
               <div className="flex h-full items-start gap-2 rounded-md border border-black/15 bg-white px-3 py-4 text-left shadow-sm">
                 <Icon className="h-10 w-10 shrink-0 text-gold" />
                 <div>
