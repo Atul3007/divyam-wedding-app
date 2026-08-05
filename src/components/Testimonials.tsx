@@ -45,7 +45,7 @@ export default function Testimonials() {
 
           <div className="grid flex-1 grid-cols-1 gap-6 lg:grid-cols-3">
             {visible.map((r, i) => (
-              <ScrollReveal key={`${r.name}-${start}-${i}`} delay={i * 190} variant="fade">
+              <ScrollReveal key={`${r.name}-${start}-${i}`} delay={i * 190} variant="up">
                 <div className="rounded-md bg-navy-light p-6">
                   <QuoteIcon className="h-6 w-6 text-gold" />
                   <div className="mt-3 flex gap-0.5">
