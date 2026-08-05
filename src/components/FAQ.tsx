@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import SectionHeading from "./SectionHeading";
 import ScrollReveal from "./ScrollReveal";
 import { PlusIcon } from "./icons";
@@ -42,6 +42,14 @@ const faqs = [
 
 function FaqItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [height, setHeight] = useState(0);
+
+  useEffect(() => {
+    if (contentRef.current) {
+      setHeight(open ? contentRef.current.scrollHeight : 0);
+    }
+  }, [open]);
 
   return (
     <div className="border-b border-black/10">
@@ -54,10 +62,10 @@ function FaqItem({ q, a }: { q: string; a: string }) {
         <PlusIcon className={`h-4 w-4 shrink-0 text-gold transition-transform duration-300 ${open ? "rotate-45" : ""}`} />
       </button>
       <div
-        className="grid overflow-hidden transition-[grid-template-rows] duration-300 ease-in-out"
-        style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
+        style={{ height }}
+        className="overflow-hidden transition-[height] duration-300 ease-in-out"
       >
-        <div className="min-h-0 overflow-hidden">
+        <div ref={contentRef}>
           <p className="pb-3 text-[13px] leading-relaxed text-ink-muted">{a}</p>
         </div>
       </div>
