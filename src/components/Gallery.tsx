@@ -1,6 +1,7 @@
 import Image from "next/image";
 import SectionHeading from "./SectionHeading";
 import ScrollReveal from "./ScrollReveal";
+import CountUp from "./CountUp";
 import { ArrowRightIcon } from "./icons";
 
 const celebrations = [
@@ -9,28 +10,28 @@ const celebrations = [
     alt: "Traditional wedding mandap with red, white and pink floral drapes",
     title: "Traditional Wedding",
     tags: "Full Planning | Catering | Décor | Hospitality",
-    guests: "600+ Guests",
+    guestCount: 600,
   },
   {
     src: "/images/celebration-multiday.png",
     alt: "Palace venue lit up at night",
     title: "Multi-day Celebration",
     tags: "Planning | Catering | Production | Hospitality",
-    guests: "1000+ Guests",
+    guestCount: 1000,
   },
   {
     src: "/images/celebration-jain-wedding.png",
     alt: "Pastel floral mandap seating area",
     title: "Jain Wedding",
     tags: "Jain Catering | Décor | Hospitality",
-    guests: "450+ Guests",
+    guestCount: 450,
   },
   {
     src: "/images/celebration-reception.png",
     alt: "Reception lounge with hanging string lights",
     title: "Reception Celebration",
     tags: "Décor | Catering | Hospitality | Production",
-    guests: "800+ Guests",
+    guestCount: 800,
   },
 ];
 
@@ -56,7 +57,7 @@ export default function Gallery() {
                   <h3 className="font-display text-sm font-semibold text-ink">{c.title}</h3>
                   <p className="mt-1 text-[11px] text-ink-muted">{c.tags}</p>
                   <p className="mt-1 text-[11px] font-semibold uppercase tracking-wide-xs text-gold-dark">
-                    {c.guests}
+                    <CountUp end={c.guestCount} suffix="+ Guests" />
                   </p>
                 </div>
               </div>

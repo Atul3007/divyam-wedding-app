@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SectionHeading from "./SectionHeading";
 import ScrollReveal from "./ScrollReveal";
 import { QuoteIcon, StarIcon, ArrowRightIcon } from "./icons";
@@ -22,9 +22,16 @@ const reviews = [
 
 export default function Testimonials() {
   const [start, setStart] = useState(0);
+  const [paused, setPaused] = useState(false);
 
   const prev = () => setStart((s) => (s - 1 + reviews.length) % reviews.length);
   const next = () => setStart((s) => (s + 1) % reviews.length);
+
+  useEffect(() => {
+    if (paused) return;
+    const id = setInterval(() => setStart((s) => (s + 1) % reviews.length), 5000);
+    return () => clearInterval(id);
+  }, [paused]);
 
   const visible = [reviews[start], reviews[(start + 1) % reviews.length], reviews[(start + 2) % reviews.length]];
 
@@ -33,7 +40,11 @@ export default function Testimonials() {
       <div className="mx-auto max-w-7xl 2xl:max-w-[1600px] px-5 lg:px-8">
         <SectionHeading title="What Families Say" light />
 
-        <div className="mt-5 flex items-center gap-4">
+        <div
+          className="mt-5 flex items-center gap-4"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+        >
           <button
             type="button"
             onClick={prev}

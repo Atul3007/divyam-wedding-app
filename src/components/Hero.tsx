@@ -1,4 +1,5 @@
 import Image from "next/image";
+import ScrollReveal from "./ScrollReveal";
 import { ArrowRightIcon } from "./icons";
 
 export default function Hero() {
@@ -14,7 +15,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-r from-[#2b1a06] from-0% via-[#2b1a06]/75 via-20% to-transparent to-50%" />
 
       <div className="relative mx-auto max-w-7xl 2xl:max-w-[1600px] px-5 py-1 sm:py-5 lg:px-8">
-        <div className="max-w-xl">
+        <ScrollReveal variant="up" duration={900} className="max-w-xl">
           <p className="text-xs font-semibold uppercase tracking-wide-xs text-gold">
             Weddings in Prayagraj
           </p>
@@ -37,7 +38,7 @@ export default function Hero() {
             Request a Private Consultation
             <ArrowRightIcon />
           </a>
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );

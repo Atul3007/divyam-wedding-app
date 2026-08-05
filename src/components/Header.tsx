@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ChevronDownIcon } from "./icons";
 
 const navItems = [
@@ -30,10 +30,26 @@ const navItems = [
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 bg-navy text-white">
-      <div className="mx-auto flex max-w-7xl 2xl:max-w-[1600px] items-center justify-between gap-6 px-5 py-3 lg:px-8">
+    <header
+      className={`sticky top-0 z-50 text-white transition-all duration-300 ${
+        scrolled ? "bg-navy/95 shadow-md backdrop-blur-sm" : "bg-navy"
+      }`}
+    >
+      <div
+        className={`mx-auto flex max-w-7xl 2xl:max-w-[1600px] items-center justify-between gap-6 px-5 lg:px-8 transition-all duration-300 ${
+          scrolled ? "py-2" : "py-3"
+        }`}
+      >
         <a href="#" className="shrink-0">
           <div className="font-display text-xl font-semibold tracking-wide-xs">
             D I V Y A M<span className="align-super text-[0.5em] text-gold">°</span>

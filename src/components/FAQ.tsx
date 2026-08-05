@@ -51,9 +51,16 @@ function FaqItem({ q, a }: { q: string; a: string }) {
         className="flex w-full items-center justify-between gap-4 py-3 text-left text-sm font-medium text-ink"
       >
         {q}
-        <PlusIcon className={`h-4 w-4 shrink-0 text-gold transition ${open ? "rotate-45" : ""}`} />
+        <PlusIcon className={`h-4 w-4 shrink-0 text-gold transition-transform duration-300 ${open ? "rotate-45" : ""}`} />
       </button>
-      {open && <p className="pb-3 text-[13px] leading-relaxed text-ink-muted">{a}</p>}
+      <div
+        className="grid overflow-hidden transition-[grid-template-rows] duration-300 ease-in-out"
+        style={{ gridTemplateRows: open ? "1fr" : "0fr" }}
+      >
+        <div className="min-h-0 overflow-hidden">
+          <p className="pb-3 text-[13px] leading-relaxed text-ink-muted">{a}</p>
+        </div>
+      </div>
     </div>
   );
 }
