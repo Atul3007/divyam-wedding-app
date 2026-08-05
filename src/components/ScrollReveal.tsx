@@ -37,7 +37,7 @@ export default function ScrollReveal({
   children,
   className = "",
   delay = 0,
-  duration = 1700,
+  duration = 1300,
   variant = "up",
   style,
 }: ScrollRevealProps) {

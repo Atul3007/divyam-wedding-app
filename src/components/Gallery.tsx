@@ -42,7 +42,7 @@ export default function Gallery() {
 
         <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {celebrations.map((c, i) => (
-            <ScrollReveal key={c.title} delay={i * 170} variant="zoom" className="h-full">
+            <ScrollReveal key={c.title} delay={i * 130} variant="zoom" className="h-full">
               <div className="group flex h-full flex-col overflow-hidden rounded-md border border-black/15 bg-white shadow-sm">
                 <div className="relative h-40 w-full overflow-hidden">
                   <Image
@@ -67,7 +67,7 @@ export default function Gallery() {
         <div className="mt-6 flex justify-center">
           <a
             href="#celebrations"
-            className="inline-flex items-center gap-2 rounded-sm bg-navy px-6 py-3 text-xs font-semibold uppercase tracking-wide-xs text-white transition hover:bg-navy-light"
+            className="btn-gold inline-flex items-center gap-2 rounded-sm px-6 py-3 text-xs font-semibold uppercase tracking-wide-xs transition hover:brightness-105"
           >
             View More Celebrations
             <ArrowRightIcon />

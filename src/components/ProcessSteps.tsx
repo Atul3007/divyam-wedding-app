@@ -36,15 +36,15 @@ export default function ProcessSteps() {
         <div className="relative mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
           <ScrollReveal
             variant="growX"
-            duration={1800}
+            duration={1400}
             className="absolute top-6 left-[10%] right-[10%] hidden border-t-2 border-dotted border-gold/50 lg:block"
           />
           {midpoints.map((pos) => (
             <ScrollReveal
               key={pos}
               variant="fade"
-              delay={((pos - 10) / 80) * 1800}
-              duration={450}
+              delay={((pos - 10) / 80) * 1400}
+              duration={380}
               className="absolute top-6 z-10 hidden -translate-y-1/2 -translate-x-1/2 text-gold/70 lg:block"
               style={{ left: `${pos}%` }}
             >
@@ -52,7 +52,7 @@ export default function ProcessSteps() {
             </ScrollReveal>
           ))}
           {steps.map((step, i) => (
-            <ScrollReveal key={step.title} delay={i * 240} duration={1100} variant="right">
+            <ScrollReveal key={step.title} delay={i * 170} duration={850} variant="right">
               <div className="relative flex flex-col items-center text-center">
                 <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-full bg-navy font-display text-lg font-semibold text-gold">
                   {i + 1}
